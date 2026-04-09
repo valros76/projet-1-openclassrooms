@@ -13,10 +13,10 @@ export const NavComponent = () => {
           </NavLink>
         </li>
         <li className="main-menu-items">
-          <NavLink to="/country" className={({ isActive }) => 
+          <NavLink to="/about" className={({ isActive }) => 
               isActive ? "main-menu-links current-link" : "main-menu-links"
             }>
-            Country detail page
+            À propos de TéléSport
           </NavLink>
         </li>
       </menu>

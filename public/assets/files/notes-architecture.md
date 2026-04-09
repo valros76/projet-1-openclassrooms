@@ -38,11 +38,24 @@ On repère à l'intérieur (antipattern = ⚠️) :
 projet-telesport
 ├── src/
 ├───── components/ # Composants UI réutilisables
+|     ├── CountryCard/
+|     |  ├── CountryCardComponent.tsx
 |     ├── Header/
 |     |  ├── HeaderComponent.tsx
 |     |  └── HeaderComponent.module.css
-|     └── Indicator/
-|        └── IndicatorComponent.tsx
+|     ├── Infos/
+|     |  ├── InfosComponent.tsx
+|     ├── MedalChart/
+|     |  ├── MedalChartComponent.tsx
+|     ├── Nav/
+|     |  ├── NavComponent.tsx
+|     ├── ParticipationTable/
+|     |  ├── ParticipationTableComponent.tsx
+|     ├── Spinner/
+|     |  ├── SpinnerComponent.css
+|     |  ├── SpinnerComponent.tsx
+|     └── StatCard/
+|        └── StatCardComponent.tsx
 ├───── hooks/ # Logique métier et data fetching
 |      └── useData.ts
 ├───── layouts/ # templates
@@ -50,12 +63,15 @@ projet-telesport
 ├───── models/ # Interfaces TypeScript
 |      └── Olympics.ts
 ├───── pages/ # Composants conteneurs (liés aux routes)
+│   ├── About/
+│   │   └── AboutPage.tsx
 │   ├── Dashboard/
 │   │   └── DashboardPage.tsx
 │   └── Detail/
 │       └── CountryDetailPage.tsx
 ├───── router/
-|     └── AppRouter.tsx
+|     ├── AppRouter.tsx
+|     └── AppRoutes.tsx
 ├───── services/
 |     └── api.ts
 ├── App.tsx

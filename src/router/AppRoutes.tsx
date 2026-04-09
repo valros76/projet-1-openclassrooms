@@ -2,6 +2,7 @@ import { Routes, Route } from "react-router";
 import { DashboardPage } from "../pages/Dashboard/DashboardPage";
 import { CountryDetailPage } from "../pages/Detail/CountryDetailPage";
 import { GlobalLayout } from "../layouts/GlobalLayout";
+import { AboutPage } from "../pages/About/AboutPage";
 
 export const AppRoutes = () => {
   return (
@@ -12,7 +13,11 @@ export const AppRoutes = () => {
           element={<DashboardPage />}
         />
         <Route
-          path="/country"
+          path="/about"
+          element={<AboutPage/>}
+        />
+        <Route
+          path="/country/:id"
           element={<CountryDetailPage />}
         />
       </Route>

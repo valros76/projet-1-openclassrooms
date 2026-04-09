@@ -8,6 +8,6 @@ athleteCount: number
 
 export interface Olympic {
 id: number,
-country: string,
+name: string,
 participations: Participation[]
 }
