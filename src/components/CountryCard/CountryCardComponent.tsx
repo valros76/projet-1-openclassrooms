@@ -1,19 +1,10 @@
-import { Link, useParams } from "react-router";
-import { useData } from "../../hooks/useData";
+import { Link } from "react-router";
 import { useMemo } from "react";
 import { StatCard } from "../StatCard/StatCardComponent";
 import { ParticipationTableComponent } from "../ParticipationTable/ParticipationTableComponent";
-import { SpinnerComponent } from "../Spinner/SpinnerComponent";
+import type { Olympic } from "../../models/Olympic";
 
-export const CountryCardComponent = () => {
-  const { id } = useParams<{ id: string }>();
-  const { data, loading, error } = useData();
-
-  const country = useMemo(() => {
-    return data?.find(
-      (country) => country.id.toString() === id,
-    );
-  }, [data, id]);
+export const CountryCardComponent = ({country}: {country: Olympic}) => {
 
   const stats = useMemo(() => {
     if (!country) return null;
@@ -36,9 +27,6 @@ export const CountryCardComponent = () => {
     };
   }, [country]);
 
-  if (loading) return <SpinnerComponent text="Chargement du pays..."/>;
-  if (error) return <p>Erreur : {error}</p>;
-
   if (!country) {
     return (
       <article>
@@ -51,9 +39,6 @@ export const CountryCardComponent = () => {
   return (
     <>
       <article>
-        <h2>
-          {country.name}
-        </h2>
         <StatCard
           label="Nombre de participations"
           value={stats?.totalParticipations}
