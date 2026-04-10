@@ -4,6 +4,7 @@ import { CountryEvolutionChart } from "../../components/CountryEvolutionChart/Co
 import { useData } from "../../hooks/useData";
 import { useMemo } from "react";
 import { SpinnerComponent } from "../../components/Spinner/SpinnerComponent";
+import { NotFoundPage } from "../NotFound/NotFoundPage";
 
 export const CountryDetailPage = () => {
   const { id } = useParams<{ id: string }>();
@@ -15,7 +16,7 @@ export const CountryDetailPage = () => {
   );
 
   if (loading) return <SpinnerComponent />;
-  if (!country) return <p>Pays introuvable</p>;
+  if (!country) return <NotFoundPage/>;
 
   return (
     <section className="max-w-6xl mx-auto">
