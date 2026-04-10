@@ -3,6 +3,7 @@ import { DashboardPage } from "../pages/Dashboard/DashboardPage";
 import { CountryDetailPage } from "../pages/Detail/CountryDetailPage";
 import { GlobalLayout } from "../layouts/GlobalLayout";
 import { AboutPage } from "../pages/About/AboutPage";
+import { NotFoundPage } from "../pages/NotFound/NotFoundPage";
 
 export const AppRoutes = () => {
   return (
@@ -20,6 +21,7 @@ export const AppRoutes = () => {
           path="/country/:id"
           element={<CountryDetailPage />}
         />
+        <Route path="*" element={<NotFoundPage/>}/>
       </Route>
     </Routes>
   );
