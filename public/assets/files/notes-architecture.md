@@ -35,6 +35,7 @@ On repère à l'intérieur (antipattern = ⚠️) :
 - ⚠️ Préparation des données du graphique dans le composant **country**, à la place d'utiliser une **fonction dédiée** ou un **custom hook** pour séparer l'UI et la logique.
 
 # Refonte architecturale proposée
+```
 projet-telesport
 ├── src/
 ├───── components/ # Composants UI réutilisables
@@ -77,6 +78,7 @@ projet-telesport
 ├── App.tsx
 ├── index.css
 └── main.tsx
+```
 
 # Mises à jour nécessaires
 - Upgrade de la version de React Router (v6 à v7)

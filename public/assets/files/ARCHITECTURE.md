@@ -2,6 +2,7 @@
 Ce document a pour but de documenter les choix architecturaux de l'application, afin de faciliter la compréhension globale du projet et sa maintenance, à tout parti le consultant.
 
 ## Arborescence des dossiers
+```
 projet-telesport
 ├── src/
 ├───── components/ # Composants UI réutilisables
@@ -46,6 +47,7 @@ projet-telesport
 ├── App.tsx
 ├── index.css
 └── main.tsx
+```
 
 ## Composants et Rôles
 L'architecture de ce projet suit le motif **Smart & Dumb Components** pour assurer une séparation claire des responsabilités de chaque partie.

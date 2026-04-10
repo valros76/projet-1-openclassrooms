@@ -2,6 +2,12 @@
 
 Application web interactive permettant de visualiser les données de performances historiques des pays lors des Jeux Olympiques.
 
+## Accès aux fichiers ARCHITECTURE.md et notes-architecture.md
+
+Vous pouvez retrouver ces fichiers dans le dossier **public/files**, ou aux adresses suivantes :
+- [Consulter ARCHITECTURE.md](https://github.com/valros76/projet-1-openclassrooms/blob/master/public/assets/files/ARCHITECTURE.md)
+- [Consulter notes-architecture.md](https://github.com/valros76/projet-1-openclassrooms/blob/master/public/assets/files/notes-architecture.md)
+
 ## Fonctionnalités
 
 - **Dashboard interactif**: Voir le total de médailles remportées par chaque pays, par le biais d'un graphique interactif.
