@@ -1,122 +1,189 @@
 # TéléSport - Olympic Games History Dashboard
 
-Interactive web application to visualize historical performance data of countries in the Olympic Games.
+Application web interactive permettant de visualiser les données de performances historiques des pays lors des Jeux Olympiques.
 
-## 🚀 Features
+## Fonctionnalités
 
-- **Interactive Dashboard**: View medal counts by country with interactive charts
-- **Country Details**: Explore detailed statistics for each participating country
-- **Data Visualization**: Interactive charts powered by Chart.js
-- **Responsive Design**: Optimized for desktop and mobile devices
-- **Modern Stack**: Built with React 19, TypeScript, and Tailwind CSS
+- **Dashboard interactif**: Voir le total de médailles remportées par chaque pays, par le biais d'un graphique interactif.
+- **Détails d'un pays**: Explorez les statistiques détaillées pour chaque pays participant.
+- **Visualisation de données**: Les graphiques interactifs sont porté par Chart.js.
+- **Design responsive**: Optimisé pour les ordinateurs, tablettes et mobiles.
+- **Stack moderne**: Créé avec React 19, Typescript, React Router v7, TailwindCSS et CSS3.
 
-## 📋 Prerequisites
+## Prérequis
 
-- **Node.js** 22 LTS or higher
-- **npm** (included with Node.js)
+- **Node.js** 22 LTS ou supérieure
+- **npm** (inclus avec Node.js) ou **bun**
 
-## 🛠️ Installation
+Si vous souhaitez utiliser bun : 
+- Sous windows : 
+> powershell -c "irm bun.sh/install.ps1|iex"
 
-Clone the repository:
+Sous MacOS ou Linux : 
+> curl -fsSL https://bun.com/install | bash
+
+## Installation
+
+Clonez le repository :
 
 ```bash
-git clone https://github.com/openclassrooms/p2-dfsjs.git
-cd p2-dfsjs
+git clone https://github.com/valros76/projet-1-openclassrooms.git
+cd projet-1-openclassrooms
 ```
 
-Install dependencies:
+Installez les dépendences:
 
 ```bash
-npm install
+npm i
 ```
 
-## 🎯 Usage
+ou
 
-### Development Server
+```bash
+bun i
+```
 
-Start the development server:
+## Utilisation
+
+### Serveur de développement
+
+Démarrez le serveur de développement :
 
 ```bash
 npm run dev
 ```
 
-The application will be available at [http://localhost:5173](http://localhost:5173)
+ou
 
-### Production Build
+```bash
+bun run dev
+```
 
-Build the application for production:
+L'application sera disponible à l'adresse suivante [http://localhost:5173](http://localhost:5173).
+
+Si vous souhaitez tester sur le réseau local, avec bun : 
+```bash
+bun run dev --host
+```
+Avec cette commande, vous aurez accès à l'application via une url commençant par **192.168.1.XX:5173**, vous permettant de tester l'application sur toutes les machines du réseau local.
+
+### Construction de la version de production
+
+Construisez l'application pour la production :
 
 ```bash
 npm run build
 ```
 
+ou
+
+```bash
+bun run build
+```
+
 ### Linting
 
-Run the linter to check code quality:
+Démarrez le linter pour vérifier la qualité du code :
 
 ```bash
 npm run lint
 ```
 
-## 📁 Project Structure
+ou
+
+```bash
+bun run lint
+```
+
+## Structure du projet
 
 ```
-p2-dfsjs/
-├── public/              # Static public assets
+projet-1-openclassrooms
 ├── src/
-│   ├── App.tsx         # Main application component
-│   ├── main.tsx        # React entry point
-│   └── index.css       # Global styles
-├── index.html          # Main HTML page
-├── package.json        # Project dependencies
-├── tsconfig.json       # TypeScript configuration
-├── vite.config.ts      # Vite configuration
-├── tailwind.config.js  # Tailwind CSS configuration
-└── .eslintrc.cjs       # ESLint configuration
+├───── components/ # Composants UI réutilisables
+|     ├── CountryCard/
+|     |  ├── CountryCardComponent.tsx
+|     ├── Header/
+|     |  ├── HeaderComponent.tsx
+|     |  └── HeaderComponent.module.css
+|     ├── Infos/
+|     |  ├── InfosComponent.tsx
+|     ├── MedalChart/
+|     |  ├── MedalChartComponent.tsx
+|     ├── Nav/
+|     |  ├── NavComponent.tsx
+|     ├── ParticipationTable/
+|     |  ├── ParticipationTableComponent.tsx
+|     ├── Spinner/
+|     |  ├── SpinnerComponent.css
+|     |  ├── SpinnerComponent.tsx
+|     └── StatCard/
+|        └── StatCardComponent.tsx
+├───── hooks/ # Logique métier et data fetching
+|      └── useData.ts
+├───── layouts/ # templates
+|      └── GlobalLayout.tsx
+├───── models/ # Interfaces TypeScript
+|      └── Olympics.ts
+├───── pages/ # Composants conteneurs (liés aux routes)
+│   ├── About/
+│   │   └── AboutPage.tsx
+│   ├── Dashboard/
+│   │   └── DashboardPage.tsx
+│   ├── Detail/
+│       └── CountryDetailPage.tsx
+│   └── NotFound/
+│       └── NotFoundPage.tsx
+├───── router/
+|     ├── AppRouter.tsx
+|     └── AppRoutes.tsx
+├───── services/
+|     └── api.ts
+├── App.tsx
+├── index.css
+└── main.tsx
 ```
 
-## 🔧 Tech Stack
+## Stack Technique
 
-- **React 19** - UI library with latest features
-- **TypeScript** - Static type checking
-- **Vite 5** - Fast build tool and dev server
-- **Tailwind CSS 4** - Utility-first CSS framework
-- **React Router 6** - Client-side routing
-- **Chart.js** - Interactive data visualization
-- **ESLint** - Code quality and consistency
+- **React 19**
+- **TypeScript**
+- **Vite 5**
+- **Tailwind CSS 4**
+- **React Router 7**
+- **Chart.js**
+- **ESLint**
 
-## 📊 Data
+## Polices
 
-The application currently uses mock data to simulate Olympic Games statistics. This architecture is designed to facilitate future integration with a REST API backend.
+- **Inter**
 
-## 🎨 Design
+## Données
 
-The application features:
+L'application utilise pour l'instant des données fictives, placées dans un fichier **olympic.json**, pour simuler les statistiques des JO.
+L'architecture du projet a été pensée pour faciliter une future intégration avec une API REST.
 
-- Clean, modern interface optimized for data visualization
-- Responsive layout adapting to all screen sizes
-- Interactive charts with hover effects
-- Smooth navigation between pages
+## Design
 
-## 📚 Documentation
+L'application propose :
 
-For more information on the technologies used:
+- Une interface épurée et moderne, optimisée pour la visualisation des données
+- Une mise en page adaptative qui s'ajuste à toutes les tailles d'écran
+- Des graphiques interactifs avec effets de survol
+- Une navigation fluide entre les pages
+- Un composant de chargement visuel pour ne pas perdre l'utilisateur lors du chargement des données
 
-- [React Documentation](https://react.dev)
-- [TypeScript Handbook](https://www.typescriptlang.org/docs/)
-- [Vite Guide](https://vitejs.dev)
-- [Tailwind CSS Documentation](https://tailwindcss.com/docs)
-- [React Router Documentation](https://reactrouter.com)
-- [Chart.js Documentation](https://www.chartjs.org/docs/latest/)
+## Documentation
 
-## 🤝 Contributing
+Pour plus d'informations sur les technologies utilisées, vous pouvez consulter ces sources :
 
-Contributions are welcome! Please feel free to submit a Pull Request.
+- [Documentation React](https://react.dev)
+- [Manuel TypeScript](https://www.typescriptlang.org/docs/)
+- [Guide Vite](https://vitejs.dev)
+- [Documentation Tailwind CSS](https://tailwindcss.com/docs)
+- [Documentation React Router](https://reactrouter.com/home)
+- [Documentation Chart.js](https://www.chartjs.org/docs/latest/)
 
-## 📝 License
+## License
 
-This project is available for educational and personal use.
-
----
-
-**Built with React 19 + TypeScript + Vite + Tailwind CSS**
+Ce projet est disponible pour un usage éducatif et personnel.

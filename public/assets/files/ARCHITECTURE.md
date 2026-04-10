@@ -34,8 +34,10 @@ projet-telesport
 │   │   └── AboutPage.tsx
 │   ├── Dashboard/
 │   │   └── DashboardPage.tsx
-│   └── Detail/
+│   ├── Detail/
 │       └── CountryDetailPage.tsx
+│   └── NotFound/
+│       └── NotFoundPage.tsx
 ├───── router/
 |     ├── AppRouter.tsx
 |     └── AppRoutes.tsx
