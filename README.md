@@ -2,11 +2,12 @@
 
 Application web interactive permettant de visualiser les données de performances historiques des pays lors des Jeux Olympiques.
 
-## Accès aux fichiers ARCHITECTURE.md et notes-architecture.md
+## Accès aux fichiers ARCHITECTURE.md, notes-architecture.md et aux screenshots
 
 Vous pouvez retrouver ces fichiers dans le dossier **public/files**, ou aux adresses suivantes :
 - [Consulter ARCHITECTURE.md](https://github.com/valros76/projet-1-openclassrooms/blob/master/public/assets/files/ARCHITECTURE.md)
 - [Consulter notes-architecture.md](https://github.com/valros76/projet-1-openclassrooms/blob/master/public/assets/files/notes-architecture.md)
+- [Télécharger l'archive des screenshots de l'application](https://github.com/valros76/projet-1-openclassrooms/blob/master/public/assets/images/screenshots/Dufrene_Valerian_2_screenshots_08042026.zip)
 
 ## Fonctionnalités
 
