@@ -99,6 +99,12 @@ section{
   gap:.75rem;
 }
 
+.sort-icon{
+  width:max-content;
+  display:block;
+  margin-inline:auto;
+}
+
 th{
   cursor:pointer;
 

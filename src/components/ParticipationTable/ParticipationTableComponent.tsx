@@ -56,10 +56,10 @@ export const ParticipationTableComponent = ({
     <table className="w-full text-left">
       <thead className="bg-gray-900 text-gray-400 text-sm uppercase">
         <tr>
-          <th className="text-center py-4" onClick={() => handleSort("year")}>Année {getSortIcon("year")}</th>
-          <th className="text-center py-4" onClick={() => handleSort("city")}>Ville {getSortIcon("city")}</th>
-          <th className="text-center py-4" onClick={() => handleSort("medalsCount")}>Médailles {getSortIcon("medalsCount")}</th>
-          <th className="text-center py-4" onClick={() => handleSort("athleteCount")}>Athlètes {getSortIcon("athleteCount")}</th>
+          <th className="text-center py-4" onClick={() => handleSort("year")}>Année <span className="sort-icon">{getSortIcon("year")}</span></th>
+          <th className="text-center py-4" onClick={() => handleSort("city")}>Ville <span className="sort-icon">{getSortIcon("city")}</span></th>
+          <th className="text-center py-4" onClick={() => handleSort("medalsCount")}>Médailles <span className="sort-icon">{getSortIcon("medalsCount")}</span></th>
+          <th className="text-center py-4" onClick={() => handleSort("athleteCount")}>Athlètes <span className="sort-icon">{getSortIcon("athleteCount")}</span></th>
         </tr>
       </thead>
       <tbody className="divide-y divide-gray-700">
