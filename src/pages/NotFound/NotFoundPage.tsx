@@ -9,7 +9,6 @@ export const NotFoundPage = () => {
 
   return (
     <section className="max-w-6xl mx-auto">
-      <h2>Contenu introuvable</h2>
       {id && isCountryPath && (
         <>
           <h2>Erreur d'identifiant</h2>
